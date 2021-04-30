@@ -1,0 +1,43 @@
+ 
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) { 
+    .navbar .container{
+        width: 70%;
+    }
+ }
+/* 主体部分 */
+#subject{
+    margin-top: 56px;
+    background-color: black;
+}
+
+#subject .Content_section,.Content_section1{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Content_section{
+    color: white;
+    font-size: 5em;
+}
+.Content_section h1{
+    font-size: calc(3.375rem + 1.5vw);
+}
+.Content_section h1:nth-child(2){
+    color: black;
+}
+.Content_section1{
+    color: white;
+    font-size: 5em;
+}
