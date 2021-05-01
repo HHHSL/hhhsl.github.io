@@ -1,6 +1,4 @@
  
-
-
 @media (min-width: 1200px) { 
     .navbar .container{
         width: 70%;
@@ -26,10 +24,5 @@
 .Content_section h1{
     font-size: calc(3.375rem + 1.5vw);
 }
-.Content_section h1:nth-child(2){
-    color: black;
-}
-.Content_section1{
-    color: white;
-    font-size: 5em;
-}
+
+
