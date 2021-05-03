@@ -1,0 +1,26 @@
+.Main_content{
+    display: flex;
+}
+.Main_content .container{
+    width: 60%;
+}
+.Main_content .Left_Nav{
+    position: fixed;
+    top: 20%;
+    left: 5%;
+}
+.Main_content .Left_Nav ul{
+    list-style-type: none;
+    font-size: 1.2em;
+}
+.card{
+   
+    margin: 12px 0px;
+    /* box-shadow: 5px 5px 5px #888888; */
+}
+.card img{
+    height: 180px;
+}
+.Main_content .card:hover{
+    box-shadow: 2px 2px 2px #888888;
+}
