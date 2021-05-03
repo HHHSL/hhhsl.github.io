@@ -11,10 +11,16 @@
 }
 .Main_content .Left_Nav ul{
     list-style-type: none;
+    font-size: 1.1em;
+}
+.Left_Nav a{
+    text-decoration: none;
+    color: #888888;
+}
+.Left_Nav ul li:hover{
     font-size: 1.2em;
 }
 .card{
-   
     margin: 12px 0px;
     /* box-shadow: 5px 5px 5px #888888; */
 }
