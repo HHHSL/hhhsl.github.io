@@ -32,14 +32,10 @@
         }
     }
     
-    .container {
-        width: 70%;
-    }
-    
     .card-body img {
         margin-bottom: 7px;
     }
     
-    .container {
+    .Daily_content .container {
         width: 70%;
     }
