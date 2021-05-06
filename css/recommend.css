@@ -1,40 +1,65 @@
-.Main_content{
+@media (max-width: 576px) {
+    .row {
+        --bs-gutter-x: 7.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .row {
+        --bs-gutter-x: 10.5rem;
+    }
+    .content .article {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .row {
+        --bs-gutter-x: 1.5rem;
+    }
+}
+
+.Main_content {
     display: flex;
 }
-.Main_content .container{
+
+.Main_content .container {
     width: 60%;
 }
-.Main_content .Left_Nav{
+
+.Main_content .Left_Nav {
     position: fixed;
     top: 20%;
     left: 5%;
 }
-.Main_content .Left_Nav ul{
+
+.Main_content .Left_Nav ul {
     list-style-type: none;
     font-size: 1.1em;
-    
-}
-.Left_Nav li{
-    margin: 3px;
-}
-.Left_Nav a{
-    text-decoration: none;
-    color: #888888;
-    border-bottom:1px solid #888888;
-}
-.Left_Nav ul li:hover{
-    font-size: 1.2em;
-    
 }
 
-.content .col-md-6{
-    width: 48%;
+.Left_Nav li {
+    margin: 3px;
+}
+
+.Left_Nav a {
+    text-decoration: none;
+    color: #888888;
+    border-bottom: 1px solid #888888;
+}
+
+.Left_Nav ul li:hover {
+    font-size: 1.2em;
+}
+
+.content .article {
     border-bottom: 0.5px solid #888888;
     border-radius: 5px;
     margin: 0 auto;
     padding: 0px;
 }
-.card{
+
+.card {
     margin-top: 20px;
     padding-top: 20px;
     height: 180px;
@@ -42,23 +67,22 @@
     border-bottom-right-radius: 0%;
     background-position: 0px;
     background-size: 100%;
-    transition-property:background-size;
-	transition-duration:1s;
-	/* 兼容 */
-    -moz-transition-property:background-size;
-	-moz-transition-duration:1s;
-    -o-transition-property:background-size;
-	-o-transition-duration:1s;
-	-webkit-transition-property:background-size;
-	-webkit-transition-duration:1s;
+    transition-property: background-size;
+    transition-duration: 1s;
+    /* 兼容 */
+    -moz-transition-property: background-size;
+    -moz-transition-duration: 1s;
+    -o-transition-property: background-size;
+    -o-transition-duration: 1s;
+    -webkit-transition-property: background-size;
+    -webkit-transition-duration: 1s;
     /* box-shadow: 5px 5px 5px #888888; */
 }
 
-.content .col-md-6:hover{
+.content .article:hover {
     box-shadow: 0px 2px #888888;
 }
-.content .col-md-6:hover .card{
+
+.content .article:hover .card {
     background-size: 110%;
 }
-
-
