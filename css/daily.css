@@ -1,3 +1,45 @@
-.container{
-    width: 70%;
-}
+    @media (min-width: 768px) and (max-width: 992px) {
+        .row {
+            --bs-gutter-x: 10.5rem;
+        }
+        .row>* {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .row {
+            --bs-gutter-x: 10.5rem;
+        }
+        .card-body img {
+            width: 25%;
+        }
+        .Daily_mood {
+            padding: 2.5%;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .row {
+            --bs-gutter-x: 8.5rem;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .blockquote {
+            padding-left: 3rem!important;
+        }
+    }
+    
+    .container {
+        width: 70%;
+    }
+    
+    .card-body img {
+        margin-bottom: 7px;
+    }
+    
+    .container {
+        width: 70%;
+    }
