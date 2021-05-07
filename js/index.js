@@ -12,7 +12,6 @@ $(function () {
             console.log()
             $(".hi p:nth-child(1)").css("opacity", Transparency_value)
             $(".hi sanp").css("opacity", Transparency_value)
-            $(".hi p:nth-child(2)").css("opacity", (1-Transparency_value))
         }
        
 

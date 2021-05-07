@@ -21,10 +21,6 @@
 .hi{
     transition: background-color 2s;
 }
-.hi p:nth-child(2){
-    font-size: 2.9em;
-    opacity: 0;
-}
 .hi,.introduce{
     display: flex;
     align-items: center;
