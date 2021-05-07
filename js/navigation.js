@@ -1,3 +1,4 @@
+document.writeln("<!--导航栏 -->");
 document.writeln("<div id=\'navigation_bar\'>");
 document.writeln("    <nav class=\'navbar navbar-expand-lg navbar-dark bg-dark fixed-top \'>");
 document.writeln("      <div class=\'container\'>");
@@ -23,7 +24,7 @@ document.writeln("            </li>");
 document.writeln("          </ul>");
 document.writeln("          <ul class=\'navbar-nav mb-2 mb-lg-0 d-flex\'>");
 document.writeln("            <li class=\'nav-item\'>");
-document.writeln("              <a class=\'nav-link\' href=\'#\'>登录</a>");
+document.writeln("              <a class=\'nav-link\' href=\'login.html\'>登录</a>");
 document.writeln("            </li>");
 document.writeln("          </ul>");
 document.writeln("        </div>");

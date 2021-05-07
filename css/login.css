@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+    .content input {
+        width: 70%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .content input {
+        width: 40%;
+    }
+}
+@media (min-width: 992px) {
+    .content input {
+        width: 30%;
+    }
+}
+
+.login {
+    display: table;
+    width: 100%;
+    background-color: black;
+}
+
+.content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.content input {
+    height: 54px;
+    margin: 10px;
+    border: 5px solid white;
+    border-radius: 50px;
+    outline:none;
+    text-align: center;
+    padding-left: 10px;
+    opacity: 0.8;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+
+}
