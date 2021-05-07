@@ -10,7 +10,7 @@
     }
  }
  @media (max-width: 576px) { 
-    .hi{
+    .hi  p:nth-child(1){
         font-size: 5em;
     }
  }
@@ -19,10 +19,18 @@
     margin-top: 56px;
 }
 .hi{
+    transition: background-color 2s;
+}
+.hi p:nth-child(2){
+    font-size: 2.9em;
+    opacity: 0;
+}
+.hi,.introduce{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 2s;
+    flex-wrap: wrap;
+    text-align: center;
 }
 .hi p{
     margin-bottom: 0px;
@@ -30,8 +38,7 @@
 .hi span{
     opacity: 0.0;
 }
-.introduce{
-    border: 2px solid red;
+.introduce p{
 }
 
 

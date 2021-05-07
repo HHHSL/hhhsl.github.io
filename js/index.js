@@ -6,16 +6,13 @@ $(function () {
     var initial_hi = 0
     $(window).scroll(function () {
         var new_hi = position("hi")
-        // if (Math.abs(new_hi - initial_hi) > 0 && Math.abs(new_hi - initial_hi) < 300) {
-        //     $(".hi span").css("opacity", "1")
-        //     initial_hi = new_hi
-        // }
         if (new_hi > 0 && new_hi < (winheight-56)*0.35) {
             //透明值
             var Transparency_value = 1-(new_hi*3.8*0.001)
             console.log()
-            $(".hi p").css("opacity", Transparency_value)
+            $(".hi p:nth-child(1)").css("opacity", Transparency_value)
             $(".hi sanp").css("opacity", Transparency_value)
+            $(".hi p:nth-child(2)").css("opacity", (1-Transparency_value))
         }
        
 
@@ -26,7 +23,7 @@ $(function () {
     setTimeout(function () {
         $(".hi").css("background-color", "black");
         $(".hi").css("color", "white");
-        $(".hi p").removeAttr("class");
+        $(".hi p:nth-child(1)").removeAttr("class");
     }, 2000)
 })
 // 返回元素位置
