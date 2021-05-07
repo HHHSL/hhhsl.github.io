@@ -6,7 +6,7 @@
 
  @media (min-width: 576px) {
      .hi p:nth-child(1) {
-         font-size: 6em;
+         font-size: 7em;
      }
  }
 
@@ -16,27 +16,38 @@
      }
  }
 
+ /* 导航栏 */
+
+ #navigation_bar .navbar {
+     transition: opacity 2s;
+ }
+
  /* 主体部分 */
 
  /* 模拟表格居中 */
 
- .hi {
+ .hi, .hi1 {
      display: table;
      width: 100%;
      transition: background-color 2s;
  }
 
- .hi .content {
+ .hi .content, .hi1 .content1 {
      display: table-cell;
      vertical-align: middle;
      text-align: center;
  }
 
- .hi span, .hi p:nth-child(2) {
+ .hi span, .hi p:nth-child(2) ,.hi1 p,#navigation_bar .navbar{
      opacity: 0;
  }
 
  .hi p:nth-child(2) {
      position: relative;
      top: 30%;
+ }
+
+ .hi1 p{
+    position: relative;
+    color: white;
  }

@@ -5,26 +5,36 @@ $(function () {
     setTimeout(function () {
         $(".hi").css("background-color", "black");
         $(".hi").css("color", "white");
+        $("#navigation_bar .navbar ").css("opacity", 1)
         $(".hi p:nth-child(1)").removeAttr("class");
-    }, 2000)
+    }, 1800)
     //跳转
     $(window).scrollTop(0)
 })
 
-
 // 滑动触发
 $(window).scroll(function () {
-    if (Eslide("hi",0.35)) {
+    if (Eslide("hi", 0.35)) {
         $(".hi p:nth-child(1)").css("opacity", Evalue("hi"));
-        // if(Eslide("hi",0.35)){
-        // }
-        $(".hi p:nth-child(2)").css("opacity", 1-Evalue("hi"));
-        console.log()
+        $(".hi p:nth-child(2)").css("opacity", 1 - Evalue("hi"));
     }
-    if(Eslide("hi",0.9)){
-        
+    if (Eslide("hi", 0.7)) {
+        $(".hi p:nth-child(2)").attr("class", "animate__animated animate__slideInLeft");
         $(".hi p:nth-child(2)").css("font-size", "50px");
+        $(".hi p:nth-child(2)").css("opacity", 1 - Evalue("hi"));
     }
+
+
+    if (slide() > Eposition("hi1") && slide() < Eposition("hi1") + Eheight("hi1")) {
+        $(".hi1 p").css("opacity", 1);
+        if (Eslide("hi1", 0.2)) {
+            $(".hi1 p").css("font-size", (1-Evalue("hi1")) * 300 + 'px');
+        }
+
+    }
+
+
+
 })
 
 // 元素透明数值
@@ -32,10 +42,10 @@ function Evalue(Element) {
     return Math.abs((1 - (Math.abs(slide() - Eposition(Element)) * 0.0036)).toFixed(3))
 }
 // 元素滑动至mun处 (建议0.3~0.5)
-function Eslide(Element,num){
-    if(Math.abs(slide()-Eposition(Element)) <= (Eheight(Element) * num)){
+function Eslide(Element, num) {
+    if (Math.abs(slide() - Eposition(Element)) <= (Eheight(Element) * num)) {
         return true
-    }else{
+    } else {
         return false
     }
 }
