@@ -1,31 +1,39 @@
 $(function () {
     // 设置内容高度
-    $("#subject .hi").css("height", ($(window).height() - 56) + 'px');
-    $("#subject .introduce").css("height", ($(window).height() - 56) + 'px');
-    $("#subject .introduce1").css("height", ($(window).height() - 56) + 'px');
-
+    $("#subject .hi").css("height", (winheight - 56) + 'px');
+    $("#subject .introduce").css("height", (winheight - 56) + 'px');
+    $("#subject .introduce1").css("height", (winheight - 56) + 'px');
+    var initial_hi = 0
     $(window).scroll(function () {
-        if(position("hi") <= 1){
-            console.log("第一个元素滑倒中间了")
+        var new_hi = position("hi")
+        // if (Math.abs(new_hi - initial_hi) > 0 && Math.abs(new_hi - initial_hi) < 300) {
+        //     $(".hi span").css("opacity", "1")
+        //     initial_hi = new_hi
+        // }
+        if (new_hi > 0 && new_hi < (winheight-56)*0.35) {
+            //透明值
+            var Transparency_value = 1-(new_hi*3.8*0.001)
+            console.log()
+            $(".hi p").css("opacity", Transparency_value)
+            $(".hi sanp").css("opacity", Transparency_value)
         }
-        if(position("introduce") <= 100){
-            console.log("第二个元素怒滑倒中间了")
-        }
-        if(position("introduce1") <= 1){
-            console.log("第三个元素怒滑倒中间了")
-        }
+       
 
     })
-    setTimeout(function() {
-        $(".hi span").css("opacity", "1")
+    setTimeout(function () {
+        $(".hi span").css("opacity", 1)
     }, 1500);
-    setTimeout(function() {
+    setTimeout(function () {
         $(".hi").css("background-color", "black");
         $(".hi").css("color", "white");
+        $(".hi p").removeAttr("class");
     }, 2000)
 })
-function position(Select_element){
-    var Element_position = document.getElementById(Select_element).getBoundingClientRect().top+$('.'+Select_element).height()/2-28
-    var Middle_position = $(window).height()/2
-    return Math.abs(Element_position - Middle_position)
+// 返回元素位置
+function position(Select_element) {
+    var Element_position = document.getElementById(Select_element).getBoundingClientRect().top + $('.' + Select_element).height() / 2 - 28
+    var Middle_position = winheight / 2
+    return Math.abs(Math.ceil(Element_position - Middle_position))
 }
+//窗口高度
+var winheight = $(window).height()
