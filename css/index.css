@@ -1,44 +1,42 @@
- 
-@media (min-width: 1200px) { 
-    .navbar .container{
-        width: 70%;
-    }
+ @media (min-width: 1200px) {
+     .navbar .container {
+         width: 70%;
+     }
  }
- @media (min-width: 576px) { 
-    .hi{
-        font-size: 6em;
-    }
+
+ @media (min-width: 576px) {
+     .hi p:nth-child(1) {
+         font-size: 6em;
+     }
  }
- @media (max-width: 576px) { 
-    .hi  p:nth-child(1){
-        font-size: 5em;
-    }
+
+ @media (max-width: 576px) {
+     .hi p:nth-child(1) {
+         font-size: 5em;
+     }
  }
-/* 主体部分 */
-#subject{
-    margin-top: 56px;
-}
-.hi{
-    transition: background-color 2s;
-}
-.hi,.introduce{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    text-align: center;
-}
-.hi p{
-    margin-bottom: 0px;
-}
-.hi span{
-    opacity: 0.0;
-}
-.introduce p{
-}
 
+ /* 主体部分 */
 
+ /* 模拟表格居中 */
 
+ .hi {
+     display: table;
+     width: 100%;
+     transition: background-color 2s;
+ }
+
+ .hi .content {
+     display: table-cell;
+     vertical-align: middle;
+     text-align: center;
+ }
+
+ .hi span, .hi p:nth-child(2) {
+     opacity: 0;
+ }
+
+ .hi p:nth-child(2) {
+     position: relative;
+     top: 30%;
+ }

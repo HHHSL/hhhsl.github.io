@@ -1,21 +1,4 @@
 $(function () {
-    // 设置内容高度
-    $("#subject .hi").css("height", (winheight - 56) + 'px');
-    $("#subject .introduce").css("height", (winheight - 56) + 'px');
-    $("#subject .introduce1").css("height", (winheight - 56) + 'px');
-    var initial_hi = 0
-    $(window).scroll(function () {
-        var new_hi = position("hi")
-        if (new_hi > 0 && new_hi < (winheight-56)*0.35) {
-            //透明值
-            var Transparency_value = 1-(new_hi*3.8*0.001)
-            console.log()
-            $(".hi p:nth-child(1)").css("opacity", Transparency_value)
-            $(".hi sanp").css("opacity", Transparency_value)
-        }
-       
-
-    })
     setTimeout(function () {
         $(".hi span").css("opacity", 1)
     }, 1500);
@@ -24,12 +7,51 @@ $(function () {
         $(".hi").css("color", "white");
         $(".hi p:nth-child(1)").removeAttr("class");
     }, 2000)
+    //跳转
+    $(window).scrollTop(0)
 })
-// 返回元素位置
-function position(Select_element) {
-    var Element_position = document.getElementById(Select_element).getBoundingClientRect().top + $('.' + Select_element).height() / 2 - 28
-    var Middle_position = winheight / 2
-    return Math.abs(Math.ceil(Element_position - Middle_position))
+
+
+// 滑动触发
+$(window).scroll(function () {
+    if (Eslide("hi",0.35)) {
+        $(".hi p:nth-child(1)").css("opacity", Evalue("hi"));
+        // if(Eslide("hi",0.35)){
+        // }
+        $(".hi p:nth-child(2)").css("opacity", 1-Evalue("hi"));
+        console.log()
+    }
+    if(Eslide("hi",0.9)){
+        
+        $(".hi p:nth-child(2)").css("font-size", "50px");
+    }
+})
+
+// 元素透明数值
+function Evalue(Element) {
+    return Math.abs((1 - (Math.abs(slide() - Eposition(Element)) * 0.0036)).toFixed(3))
 }
+// 元素滑动至mun处 (建议0.3~0.5)
+function Eslide(Element,num){
+    if(Math.abs(slide()-Eposition(Element)) <= (Eheight(Element) * num)){
+        return true
+    }else{
+        return false
+    }
+}
+//检测滑动高度
+function slide() {
+    return Math.round($(window).scrollTop())
+}
+
 //窗口高度
 var winheight = $(window).height()
+
+//获取元素位置
+function Eposition(Element) {
+    return Math.round($('.' + Element).offset().top)
+}
+//获取元素高度
+function Eheight(Element) {
+    return Math.round($('.' + Element).height())
+}
